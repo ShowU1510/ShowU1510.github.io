@@ -1,53 +1,130 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <style>
+<meta charset="UTF-8">
+<title>ポートフォリオ</title>
+
+<style>
+  /* ===== 全体 ===== */
   body {
-    max-width: 900px;
-    margin: 40px auto;
+    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.7;
+    background-color: #0f172a;
+    color: #e5e7eb;
   }
-  h1 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
+
+  /* ===== ヒーロー ===== */
+  .hero {
+    background: linear-gradient(135deg, #1e293b, #0ea5e9);
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    border: none;
+  }
+
+  .hero p {
+    margin-top: 10px;
+    opacity: 0.9;
+  }
+
+  /* ===== 見出し ===== */
   h2 {
     margin-top: 50px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
   }
-  .work {
-    margin-bottom: 40px;
+
+  /* ===== スキル ===== */
+  ul {
+    padding-left: 20px;
+  }
+
+  /* ===== 作品グリッド ===== */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  /* ===== 作品カード ===== */
+  .project-card {
+    background: #111827;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+    padding: 20px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+  }
+
+  .label {
+    font-weight: bold;
+  }
+
+  /* ===== フッター余白 ===== */
+  .spacer {
+    height: 40px;
   }
 </style>
-  <meta charset="UTF-8">
-  <title>ポートフォリオ</title>
 </head>
+
 <body>
 
-<h1>浦部 翔｜ゲームプログラマー</h1>
+<!-- ===== ヒーロー ===== -->
+<section class="hero">
+  <h1>浦部 翔｜ゲームプログラマー</h1>
+  <p>C++ / DirectX / Unity / UE5 を用いたゲーム制作</p>
+</section>
 
-<p>
-C++ / DirectX / Unity / UE5 を用いたゲーム制作を行っています。<br>
-</p>
+<div class="container">
 
-<h2>スキル</h2>
-<ul>
-  <li>C#, C++</li>
-  <li>DirectX11</li>
-  <li>Unreal Engine 5</li>
-</ul>
+  <!-- ===== スキル ===== -->
+  <h2>スキル</h2>
+  <ul>
+    <li>C#, C++</li>
+    <li>DirectX11</li>
+    <li>Unreal Engine 5</li>
+  </ul>
 
-<h2>作品</h2>
-<div class="work">
-  <h3>無双風3Dゲーム</h3>
-  <p><b>制作人数：</b>１人</p>
-  <p><b>使用技術：</b>C++ / DirectX11</p>
+  <!-- ===== 作品 ===== -->
+  <h2>作品</h2>
 
-  <p>
-    同一メッシュを大量に描画するため、
-    インスタンシング描画を用いて描画負荷を削減しました。
-  </p>
+  <div class="project-grid">
 
+    <div class="project-card">
+      <h3>無双風3Dゲーム</h3>
+
+      <p><span class="label">制作人数：</span>1人</p>
+      <p><span class="label">使用技術：</span>C++ / DirectX11</p>
+
+      <p>
+        同一メッシュを大量に描画するため、
+        インスタンシング描画を用いて描画負荷を削減しました。
+      </p>
+    </div>
+
+  </div>
+
+  <div class="spacer"></div>
 </div>
 
 </body>
